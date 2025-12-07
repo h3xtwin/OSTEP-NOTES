@@ -4,7 +4,7 @@ In this chapter we'll discuss the most fundamental abstraction the OS provides:
 # What is a process?
 __A running program.__
 
-The program by itself is a lifeless thing; it just sits there on the disk like a dumbass on the disk with a bunch of instructions (and maybe some static data) waiting to spring into action.
+The program by itself is a lifeless thing; it just sits there on the disk like a dumb ass on the disk with a bunch of instructions (and maybe some static data) waiting to spring into action.
 It is the __OS__ that takes those bytes and puts them into action.
 
 ## but:
@@ -29,3 +29,14 @@ The OS creates the illusion of __infinite CPUS__ with virtualization.
 - running another
 - and so fourth
 This technique ^^^ is known as __time sharing__ of the CPU, allows users to run as many concurrent processes as they want; the only potential cost is performance, as each process the CPU will have to iterate through for a longer time.
+
+To implement Virtualization of the CPU and to implement it well, the OS will need both some low level machinery and some high level intelligence
+We call the low level machinery __mechanisms__; mechanisms are low level methods or protocols that implement a needed piece of functionality
+
+# TIP: USE OF TIME SHARING:
+__time sharing__ is a basic technique used by the OS to share a resource.
+The way time sharing works is for allowing a resource to be used for a little while by one entity and then a little while and so fourth.
+The counterpart of time sharing is __space sharing__, where a resource is divided (in space) among those who wish to use it.
+For example, disk space is naturally a space shared resource; once a block is a assigned to a file it is normally not assigned to another file until the user deletes the original file.
+
+
